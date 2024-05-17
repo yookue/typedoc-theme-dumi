@@ -28,6 +28,10 @@
 
 🖼️ The live example of this theme is here: [https://yookue.github.io/typedoc-theme-dumi](https://yookue.github.io/typedoc-theme-dumi)
 
+## Snapshot
+
+![snapshot](https://raw.githubusercontent.com/yookue/typedoc-theme-dumi/trunk/doc/snapshot.png)
+
 ## Quickstart
 
 You can install this package in your typescript project as follows:
