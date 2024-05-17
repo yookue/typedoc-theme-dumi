@@ -1,0 +1,34 @@
+{
+    "name": "TypedocThemeDumi",
+    "entryPoints": [
+        "src/index.tsx"
+    ],
+    "disableSources": true,
+    "excludeExternals": true,
+    "excludeInternal": true,
+    "excludePrivate": true,
+    "excludeProtected": true,
+    "excludeNotDocumented": true,
+    "excludeNotDocumentedKinds": [
+        "ConstructorSignature"
+    ],
+    "hideGenerator": false,
+    "includeVersion": false,
+    "navigationLinks": {
+        "GitHub": "https://github.com/yookue/typedoc-theme-dumi",
+        "Yookue": "https://yookue.com"
+    },
+    "plugin": [
+        "./dist/cjs/index.js"
+    ],
+    "theme": "dumi",
+    "logoImage": "https://typedoc.org/images/logo-32.png",
+    "logoTitle": "Typedoc Theme Dumi",
+    "navigationLinkTargets": {
+        "GitHub": "_blank",
+        "Yookue": "_blank"
+    },
+    "preventModulesLink": true,
+    "hideIndexContentTitle": true,
+    "footerAlign": "center"
+}

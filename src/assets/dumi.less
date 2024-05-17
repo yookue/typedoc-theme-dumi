@@ -1,0 +1,346 @@
+/*!
+ * @yookue/typedoc-theme-dumi
+ * Copyright (c) 2024 Yookue Ltd. All rights reserved.
+ * Licensed under the MIT License
+ */
+
+
+/**
+ * Root variables
+ * @see "https://github.com/TypeStrong/typedoc/blob/master/static/style.css"
+ */
+:root {
+    // light
+    --light-color-background: #fff !important;
+    --light-color-background-secondary: #fff !important;
+    --light-color-active-menu-item: linear-gradient(270deg, #f8faff, rgba(248, 250, 255, 0)) !important;
+    --light-code-background: #f5f5f5 !important;
+
+    // dark
+    --dark-color-background: #141414 !important;
+    --dark-color-background-secondary: #141414 !important;
+    --dark-color-active-menu-item: linear-gradient(270deg, #3d3d3e, hsla(0deg, 0, 100%, 0)) !important;
+    --dark-code-background: #262626 !important;
+
+    // customized light
+    --light-toolbar-background: #fff;
+    --light-toolbar-shadow: 0 8px 24px -2px rgba(0, 0, 0, .05);
+    --light-search-background: #e6f7ff;
+    --light-search-border: #1890ff;
+    --light-boundary-border: #ebedf1;
+    --light-code-copy-border: #1890ff;
+    --light-code-copy-background: #e6f7ff;
+    --light-code-copy-text: #222;
+    --light-checkbox-background: #1890ff;
+    --light-checkbox-stroke: #fff;
+
+    // customized dark
+    --dark-toolbar-background: #141414;
+    --dark-toolbar-shadow: 0 2px 8px 0 rgba(0,0,0,.65);
+    --dark-search-background: #494949;
+    --dark-search-border: #bfbfbf;
+    --dark-boundary-border: #6b6c6d;
+    --dark-code-copy-border: #000;
+    --dark-code-copy-background: hsla(0deg, 0, 100%, .85);
+    --dark-code-copy-text: #222;
+    --dark-checkbox-background: #1890ff;
+    --dark-checkbox-stroke: #fff;
+}
+
+
+/**
+ * Light mode adaptability
+ */
+@media (prefers-color-scheme: light) {
+    :root {
+        --toolbar-background: var(--light-toolbar-background);
+        --toolbar-shadow: var(--light-toolbar-shadow);
+        --search-background: var(--light-search-background);
+        --search-border: var(--light-search-border);
+        --boundary-border: var(--light-boundary-border);
+        --code-copy-border: var(--light-code-copy-border);
+        --code-copy-background: var(--light-code-copy-background);
+        --code-copy-text: var(--light-code-copy-text);
+        --checkbox-background: var(--light-checkbox-background);
+        --checkbox-stroke: var(--light-checkbox-stroke);
+    }
+}
+
+:root[data-theme="light"] {
+    --toolbar-background: var(--light-toolbar-background);
+    --toolbar-shadow: var(--light-toolbar-shadow);
+    --search-background: var(--light-search-background);
+    --search-border: var(--light-search-border);
+    --boundary-border: var(--light-boundary-border);
+    --code-copy-border: var(--light-code-copy-border);
+    --code-copy-background: var(--light-code-copy-background);
+    --code-copy-text: var(--light-code-copy-text);
+    --checkbox-background: var(--light-checkbox-background);
+    --checkbox-stroke: var(--light-checkbox-stroke);
+}
+
+
+/**
+ * Dark mode adaptability
+ */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --toolbar-background: var(--dark-toolbar-background);
+        --toolbar-shadow: var(--dark-toolbar-shadow);
+        --search-background: var(--dark-search-background);
+        --search-border: var(--dark-search-border);
+        --boundary-border: var(--dark-boundary-border);
+        --code-copy-border: var(--dark-code-copy-border);
+        --code-copy-background: var(--dark-code-copy-background);
+        --code-copy-text: var(--dark-code-copy-text);
+        --checkbox-background: var(--dark-checkbox-background);
+        --checkbox-stroke: var(--dark-checkbox-stroke);
+    }
+}
+
+:root[data-theme="dark"] {
+    --toolbar-background: var(--dark-toolbar-background);
+    --toolbar-shadow: var(--dark-toolbar-shadow);
+    --search-background: var(--dark-search-background);
+    --search-border: var(--dark-search-border);
+    --boundary-border: var(--dark-boundary-border);
+    --code-copy-border: var(--dark-code-copy-border);
+    --code-copy-background: var(--dark-code-copy-background);
+    --code-copy-text: var(--dark-code-copy-text);
+    --checkbox-background: var(--dark-checkbox-background);
+    --checkbox-stroke: var(--dark-checkbox-stroke);
+}
+
+
+// Text Alignment
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+
+// Toolbar of header
+.tsd-page-toolbar {
+    border-bottom: none !important;
+    background-color: var(--toolbar-background) !important;
+    box-shadow: var(--toolbar-shadow);
+    padding: 12px 0;
+
+    #tsd-search a.title {
+        font-size: 20px !important;
+
+        .logo {
+            margin-right: 12px !important;
+            vertical-align: middle;
+        }
+    }
+
+    #tsd-search[class*="has-focus"] {
+        border: 1px solid var(--search-border);
+        border-radius: 2px;
+        background-color: var(--search-background);
+    }
+}
+
+
+// Links of header, page menu, index panel
+.container .col-content .tsd-index-panel a,
+.container .page-menu .tsd-accordion-details a,
+footer a,
+.tsd-page-toolbar #tsd-search a.title,
+.tsd-page-toolbar #tsd-toolbar-links a {
+    &:hover {
+        color: #5a7ad9 !important;
+        text-decoration: none !important;
+    }
+
+    &:active {
+        color: #5173d7 !important;
+    }
+}
+
+
+// Container
+.container {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+
+    &.container-main {
+        min-height: calc(100vh - 60px - 4rem) !important;
+    }
+
+    .site-menu {
+        max-width: 330px;
+        border-right: 1px solid var(--boundary-border);
+        padding: 32px 0 !important;
+
+        .tsd-navigation {
+            a {
+                padding: 10px 0;
+                width: 100% !important;
+
+                &.current {
+                    border-right: 3px solid #4569d4;
+                }
+
+                &:hover {
+                    text-decoration: none !important;
+
+                    &, span {
+                        color: #5a7ad9 !important;
+                    }
+                }
+
+                &:active {
+                    &, span {
+                        color: #5173d7 !important;
+                    }
+                }
+            }
+
+            .tsd-index-accordion .tsd-accordion-summary > svg {
+                position: absolute;
+                right: 1.5rem;
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    .col-content {
+        padding: 32px 2rem !important;
+
+        .tsd-page-title-hidden ~ .tsd-panel h1 {
+            margin-top: 0 !important;
+        }
+
+        .tsd-page-title .tsd-tag {
+            vertical-align: middle;
+            font-size: 40% !important;
+        }
+
+        .tsd-panel-group .tsd-tag {
+            font-size: 55% !important;
+            margin-right: 8px;
+        }
+
+        .tsd-index-section .tsd-index-link {
+            &:hover {
+                span, span > wbr {
+                    color: #5a7ad9 !important;
+                }
+            }
+
+            &:active {
+                span, span > wbr {
+                    color: #5173d7 !important;
+                }
+            }
+        }
+
+        pre {
+            border: none !important;
+            border-radius: 2px !important;
+            background-color: var(--code-background) !important;
+
+            & > button {
+                border: 1px solid var(--code-copy-border) !important;
+                border-radius: 2px !important;
+                color: var(--code-copy-text) !important;
+                background-color: var(--code-copy-background) !important;
+                padding: 3px;
+                cursor: pointer;
+            }
+
+            & > code > span {
+                background-color: var(--code-background) !important;
+            }
+        }
+
+        code {
+            color: #d56161 !important;
+        }
+    }
+
+    .page-menu {
+        margin: 32px 0 !important;
+
+        .tsd-navigation, .tsd-page-navigation {
+            border-left: 1px solid var(--boundary-border);
+            padding-left: 1.5rem;
+        }
+
+        .tsd-navigation {
+            margin-bottom: 0 !important;
+            padding-bottom: 28px;
+
+            .tsd-theme-toggle select {
+                min-width: 80px;
+                cursor: pointer;
+                outline: none;
+            }
+        }
+
+        .tsd-accordion-summary > h3 > svg {
+            position: absolute;
+            right: 0;
+        }
+
+        .tsd-accordion-details {
+            margin: 8px 0;
+
+            a {
+                &:hover span {
+                    color: #5a7ad9 !important;
+                }
+
+                &:active span {
+                    color: #5a7ad9 !important;
+                }
+            }
+        }
+
+        h3, h4 {
+            font-size: 1rem !important;
+        }
+    }
+}
+
+
+// Footer
+footer {
+    border-top: 1px solid var(--boundary-border) !important;
+}
+
+
+// Filter checkbox
+.tsd-accordion-details .tsd-filter-input {
+    svg {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    input[type="checkbox"]:checked ~ svg {
+        .tsd-checkbox-background {
+            fill: var(--checkbox-background) !important;
+        }
+
+        .tsd-checkbox-checkmark {
+            stroke: var(--checkbox-stroke) !important;
+        }
+    }
+
+    input[type="checkbox"]:not(:checked) ~ svg {
+        box-shadow: inset 0 0 0 1px var(--color-accent);
+
+        .tsd-checkbox-background {
+            fill: var(--color-background);
+        }
+    }
+}

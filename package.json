@@ -1,0 +1,81 @@
+{
+    "name": "@yookue/typedoc-theme-dumi",
+    "version": "0.1.0",
+    "title": "TypedocThemeDumi",
+    "description": "Dumi theme for typedoc, maybe the most beautiful typedoc theme on Mars",
+    "homepage": "https://yookue.github.io/typedoc-theme-dumi",
+    "organization": "Yookue Ltd",
+    "private": false,
+    "license": "MIT",
+    "keywords": [
+        "typedoc",
+        "typedoc-theme",
+        "typedoc-theme-dumi"
+    ],
+    "files": [
+        "dist"
+    ],
+    "main": "dist/cjs/index.js",
+    "types": "dist/cjs/index.d.ts",
+    "sideEffects": false,
+    "scripts": {
+        "build": "npm run build:script && npm run build:style",
+        "build:script": "del-cli ./dist && tsc --outDir ./dist/cjs",
+        "build:style": "lessc ./src/assets/dumi.less ./dist/cjs/assets/dumi.css --no-comment",
+        "docs:build": "typedoc --out ./docs-dist",
+        "docs:publish": "gh-pages -d ./docs-dist",
+        "lint": "npm run lint:script && npm run lint:style",
+        "lint:script": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
+        "lint:style": "stylelint \"{src,test}/**/*.{css,less}\""
+    },
+    "devDependencies": {
+        "@types/node": "^16.18.96",
+        "@typescript-eslint/eslint-plugin": "^6.21.0",
+        "del-cli": "^5.1.0",
+        "gh-pages": "^6.1.1",
+        "less": "^4.2.0",
+        "less-plugin-no-comment": "^0.1.0",
+        "stylelint-config-standard-less": "^3.0.1",
+        "typedoc": "~0.25.13",
+        "typescript": "^4.9.5"
+    },
+    "peerDependencies": {
+        "@types/node": ">=16.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yookue/typedoc-theme-dumi.git"
+    },
+    "bugs": {
+        "url": "https://github.com/yookue/typedoc-theme-dumi/issues"
+    },
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
+    },
+    "collective": {
+        "url": "https://opencollective.com/yookue-awesome"
+    },
+    "funding": [
+        {
+            "type": "opencollective",
+            "url": "https://opencollective.com/yookue-awesome"
+        },
+        {
+            "type": "individual",
+            "url": "https://yookue.com/public/donate"
+        }
+    ],
+    "author": {
+        "name": "Yookue Ltd",
+        "email": "yookue@outlook.com",
+        "url": "https://yookue.com"
+    },
+    "contributors": [
+        {
+            "name": "David Hsing",
+            "email": "davidhsing@163.com",
+            "url": "https://github.com/davidhsing"
+        }
+    ]
+}
