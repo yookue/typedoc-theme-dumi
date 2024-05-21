@@ -35,7 +35,7 @@ import {DumiTheme} from './themes/DumiTheme';
  */
 // noinspection JSUnusedGlobalSymbols
 export function load(app: Application) {
-    // Check theme self
+    // Check theme identifier
     if (app.options.getValue('theme') !== 'dumi') {
         return;
     }
@@ -49,7 +49,7 @@ export function load(app: Application) {
     app.renderer.hooks.on('head.end', (context): JSX.Element => {
         return (
             <>
-                <meta name="theme-generator" content="@yookue/typedoc-theme-dumi"/>
+                <meta name="typedoc-theme" content="@yookue/typedoc-theme-dumi"/>
                 <link rel="stylesheet" type="text/css" href={context.relativeURL('./assets/dumi.css')}/>
             </>
         );

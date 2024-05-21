@@ -1,6 +1,6 @@
 {
     "name": "@yookue/typedoc-theme-dumi",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "title": "TypedocThemeDumi",
     "description": "Dumi theme for typedoc, maybe the most beautiful typedoc theme on Mars",
     "homepage": "https://yookue.github.io/typedoc-theme-dumi",
