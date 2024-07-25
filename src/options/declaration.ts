@@ -30,7 +30,7 @@ export const logoWidth: DeclarationOption = {
     name: 'logoWidth',
     type: ParameterType.Number,
     help: 'The logo image width',
-    validate(value) {
+    validate(value: number) {
         if (!value || value <= 0) {
             throw new SyntaxError(`logoWidth must be a positive number value.`);
         }

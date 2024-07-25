@@ -26,7 +26,7 @@ import {DumiThemeRenderContext} from '../contexts/DumiThemeRenderContext';
  */
 // noinspection JSUnusedGlobalSymbols
 export class DumiTheme extends DefaultTheme {
-    override getRenderContext(event: PageEvent<Reflection>): DumiThemeRenderContext {
-        return new DumiThemeRenderContext(this, event, this.application.options);
+    override getRenderContext(props: PageEvent<Reflection>): DumiThemeRenderContext {
+        return new DumiThemeRenderContext(this, props, this.application.options);
     }
 }

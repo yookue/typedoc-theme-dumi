@@ -27,17 +27,17 @@ import {classNames, displayName} from '../utils/proto-utils';
  *
  * @see "https://github.com/TypeStrong/typedoc/blob/master/src/lib/output/themes/default/partials/navigation.tsx"
  */
-export function navigation(context: DumiThemeRenderContext, event: PageEvent<Reflection>): JSX.Element {
+export const navigation = (context: DumiThemeRenderContext, props: PageEvent<Reflection>): JSX.Element => {
     const preventModulesLink = context.options.getValue('preventModulesLink') as boolean;
 
     return (
         <nav class="tsd-navigation">
-            <a href={preventModulesLink ? 'javascript:;' : context.urlTo(event.project)} class={classNames({current: event.project === event.model})}>
+            <a href={preventModulesLink ? 'javascript:;' : context.urlTo(props.project)} class={classNames({current: props.project === props.model})}>
                 {context.icons[ReflectionKind.Project]()}
-                <span>{displayName(event.project)}</span>
+                <span>{displayName(props.project)}</span>
             </a>
             <ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base={context.relativeURL("./")}>
-                <li>Loading...</li>
+                <li>{context.i18n.theme_loading()}</li>
             </ul>
         </nav>
     );

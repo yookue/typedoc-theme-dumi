@@ -56,7 +56,7 @@ export function load(app: Application) {
     });
 
     // Copy stylesheet
-    app.listenTo(app.renderer, RendererEvent.END, () => {
+    app.renderer.on(RendererEvent.END, () => {
         const source = nodePath.resolve(__dirname, './assets');
         const target = nodePath.join(nodePath.resolve(app.options.getValue('out')), 'assets');
         nodeFs.cpSync(source, target, {force: true, recursive: true});

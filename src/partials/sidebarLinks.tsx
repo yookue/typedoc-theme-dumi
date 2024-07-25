@@ -26,7 +26,7 @@ import {DumiThemeRenderContext} from '../contexts/DumiThemeRenderContext';
  *
  * @see "https://github.com/TypeStrong/typedoc/blob/master/src/lib/output/themes/default/partials/navigation.tsx"
  */
-export function sidebarLinks(context: DumiThemeRenderContext): JSX.Element | null {
+export const sidebarLinks = (context: DumiThemeRenderContext): JSX.Element | null => {
     const sidebarLinks = Object.entries(context.options.getValue("sidebarLinks"));
     const sidebarLinkTargets = context.options.getValue('sidebarLinkTargets') as Record<string, string>;
 

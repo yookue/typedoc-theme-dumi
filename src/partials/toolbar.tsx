@@ -27,7 +27,7 @@ import {displayName} from '../utils/proto-utils';
  *
  * @see "https://github.com/TypeStrong/typedoc/blob/master/src/lib/output/themes/default/partials/toolbar.tsx"
  */
-export function toolbar(context: DumiThemeRenderContext, event: PageEvent<Reflection>): JSX.Element {
+export const toolbar = (context: DumiThemeRenderContext, props: PageEvent<Reflection>): JSX.Element => {
     const logoImage = context.options.getValue('logoImage') as string;
     const logoWidth = context.options.getValue('logoWidth') as number;
     const logoHeight = context.options.getValue('logoHeight') as number;
@@ -56,7 +56,7 @@ export function toolbar(context: DumiThemeRenderContext, event: PageEvent<Reflec
                         <label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption">
                             {context.icons.search()}
                         </label>
-                        <input type="text" id="tsd-search-field" aria-label="Search" />
+                        <input type="text" id="tsd-search-field" aria-label={context.i18n.theme_search()}/>
                     </div>
                     <div class="field">
                         <div id="tsd-toolbar-links">
@@ -66,16 +66,16 @@ export function toolbar(context: DumiThemeRenderContext, event: PageEvent<Reflec
                         </div>
                     </div>
                     <ul class="results">
-                        <li class="state loading">Preparing search index...</li>
-                        <li class="state failure">The search index is not available</li>
+                        <li class="state loading">{context.i18n.theme_preparing_search_index()}</li>
+                        <li class="state failure">{context.i18n.theme_search_index_not_available()}</li>
                     </ul>
                     <a href={context.options.getValue("titleLink") || context.relativeURL("index.html")} class="title">
                         {buildImageDom()}
-                        {logoTitle || displayName(event.project)}
+                        {logoTitle ?? displayName(props.project)}
                     </a>
                 </div>
                 <div class="table-cell" id="tsd-widgets">
-                    <a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu">
+                    <a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label={context.i18n.theme_menu()}>
                         {context.icons.menu()}
                     </a>
                 </div>

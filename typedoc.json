@@ -8,10 +8,6 @@
     "excludeInternal": true,
     "excludePrivate": true,
     "excludeProtected": true,
-    "excludeNotDocumented": true,
-    "excludeNotDocumentedKinds": [
-        "ConstructorSignature"
-    ],
     "hideGenerator": false,
     "includeVersion": false,
     "navigationLinks": {

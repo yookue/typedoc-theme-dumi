@@ -16,7 +16,7 @@
 
 
 import {JSX, ReflectionKind, type PageEvent, type Reflection} from 'typedoc';
-import {DumiThemeRenderContext} from '../contexts/DumiThemeRenderContext';
+import {type DumiThemeRenderContext} from '../contexts/DumiThemeRenderContext';
 import {classNames, displayName, hasTypeParameters, joinElements} from '../utils/proto-utils';
 
 
@@ -27,27 +27,29 @@ import {classNames, displayName, hasTypeParameters, joinElements} from '../utils
  *
  * @see "https://github.com/TypeStrong/typedoc/blob/master/src/lib/output/themes/default/partials/navigation.tsx"
  */
-export function header(context: DumiThemeRenderContext, event: PageEvent<Reflection>): JSX.Element {
+export const header = (context: DumiThemeRenderContext, props: PageEvent<Reflection>): JSX.Element => {
     const hideIndexContentTitle = context.options.getValue('hideIndexContentTitle') as boolean;
-    if (hideIndexContentTitle && event.url === 'index.html') {
+    if (hideIndexContentTitle && props.url === 'index.html') {
         return <div class="tsd-page-title-hidden" style="display: none"></div>;
     }
-    const HeadingLevel: string = event.model.isProject() ? 'h2' : 'h1';
+    const HeadingLevel: string = props.model.isProject() ? 'h2' : 'h1';
     return (
         <div class="tsd-page-title">
-            {!!event.model.parent && <ul class="tsd-breadcrumb">{context.breadcrumb(event.model)}</ul>}
-            <HeadingLevel class={classNames({ deprecated: event.model.isDeprecated() })}>
-                {event.model.kind !== ReflectionKind.Project && `${ReflectionKind.singularString(event.model.kind)} `}
-                {displayName(event.model)}
-                {hasTypeParameters(event.model) && (
-                    <>
-                        {"<"}
-                        {joinElements(", ", event.model.typeParameters, (item) => item.name)}
-                        {">"}
-                    </>
-                )}
-                {context.reflectionFlags(event.model)}
-            </HeadingLevel>
+            {!!props.model.parent && <ul class="tsd-breadcrumb">{context.breadcrumb(props.model)}</ul>}
+            {!props.model.isDocument() && (
+                <HeadingLevel class={classNames({ deprecated: props.model.isDeprecated() })}>
+                    {props.model.kind !== ReflectionKind.Project && `${context.internationalization.kindSingularString(props.model.kind)} `}
+                    {displayName(props.model)}
+                    {hasTypeParameters(props.model) && (
+                        <>
+                            {"<"}
+                            {joinElements(", ", props.model.typeParameters, (item) => item.name)}
+                            {">"}
+                        </>
+                    )}
+                    {context.reflectionFlags(props.model)}
+                </HeadingLevel>
+            )}
         </div>
     );
 }
