@@ -19,6 +19,13 @@
 import {ParameterType, type DeclarationOption} from 'typedoc';
 
 
+/**
+ * Options of dumi theme for typedoc
+ *
+ * @author David Hsing
+ */
+
+
 export const logoImage: DeclarationOption = {
     name: 'logoImage',
     type: ParameterType.String,

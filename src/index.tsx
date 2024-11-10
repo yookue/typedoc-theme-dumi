@@ -18,8 +18,8 @@
 import nodeFs from 'node:fs';
 import nodePath from 'node:path';
 import {Application, JSX, RendererEvent} from 'typedoc';
-import * as options from './options/declaration';
-import {DumiTheme} from './themes/DumiTheme';
+import * as options from './declare/options';
+import {DumiTheme} from './theme/DumiTheme';
 
 
 /**

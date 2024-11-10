@@ -16,8 +16,8 @@
 
 
 import {JSX, type PageEvent, type Reflection} from 'typedoc';
-import {DumiThemeRenderContext} from '../contexts/DumiThemeRenderContext';
-import {displayName} from '../utils/proto-utils';
+import {DumiThemeRenderContext} from '../context/DumiThemeRenderContext';
+import {displayName} from '../util/proto-utils';
 
 
 /**

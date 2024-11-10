@@ -19,6 +19,13 @@ import {JSX, DeclarationReflection, ProjectReflection, Reflection, SignatureRefl
 
 
 /**
+ * Utilities of dumi theme for typedoc
+ *
+ * @author David Hsing
+ */
+
+
+/**
  * Binds a property to an instance
  *
  * @see "https://github.com/TypeStrong/typedoc/blob/master/src/lib/output/themes/default/DefaultThemeRenderContext.ts"
