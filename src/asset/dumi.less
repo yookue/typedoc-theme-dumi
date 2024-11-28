@@ -52,7 +52,6 @@
  * Light mode adaptability
  */
 @media (prefers-color-scheme: light) {
-    //noinspection DuplicatedCode
     :root {
         --toolbar-background: var(--light-toolbar-background);
         --toolbar-shadow: var(--light-toolbar-shadow);
@@ -67,7 +66,6 @@
     }
 }
 
-//noinspection DuplicatedCode
 :root[data-theme="light"] {
     --toolbar-background: var(--light-toolbar-background);
     --toolbar-shadow: var(--light-toolbar-shadow);
@@ -86,7 +84,6 @@
  * Dark mode adaptability
  */
 @media (prefers-color-scheme: dark) {
-    //noinspection DuplicatedCode
     :root {
         --toolbar-background: var(--dark-toolbar-background);
         --toolbar-shadow: var(--dark-toolbar-shadow);
@@ -101,7 +98,6 @@
     }
 }
 
-//noinspection DuplicatedCode
 :root[data-theme="dark"] {
     --toolbar-background: var(--dark-toolbar-background);
     --toolbar-shadow: var(--dark-toolbar-shadow);
@@ -209,10 +205,24 @@ footer a,
                 }
             }
 
-            .tsd-index-accordion .tsd-accordion-summary > svg {
-                position: absolute;
-                right: 1.5rem;
-                margin-top: 1rem;
+            > .tsd-small-nested-navigation {
+                margin-left: 3rem;
+
+                .tsd-index-accordion {
+                    > .tsd-accordion-summary > svg {
+                        position: absolute;
+                        right: 1.5rem;
+                        margin-top: 1rem;
+                    }
+
+                    > .tsd-accordion-details > .tsd-nested-navigation {
+                        margin-left: 1.5rem;
+                    }
+                }
+
+                > li > a {
+                    margin-left: -1.5rem;
+                }
             }
         }
     }
