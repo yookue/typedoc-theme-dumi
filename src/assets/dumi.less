@@ -205,10 +205,24 @@ footer a,
                 }
             }
 
-            .tsd-index-accordion .tsd-accordion-summary > svg {
-                position: absolute;
-                right: 1.5rem;
-                margin-top: 1rem;
+            > .tsd-small-nested-navigation {
+                margin-left: 3rem;
+
+                .tsd-index-accordion {
+                    > .tsd-accordion-summary > svg {
+                        position: absolute;
+                        right: 1.5rem;
+                        margin-top: 1rem;
+                    }
+
+                    > .tsd-accordion-details > .tsd-nested-navigation {
+                        margin-left: 1.5rem;
+                    }
+                }
+
+                > li > a {
+                    margin-left: -1.5rem;
+                }
             }
         }
     }
