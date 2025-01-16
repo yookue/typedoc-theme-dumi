@@ -77,6 +77,15 @@ Here are the available options, could be used in `typedoc.json`:
 | hideIndexContentTitle | boolean                | Whether to hide the content title from the index page                           |
 | footerAlign           | string                 | The alignment of the footer, the available values are `left`, `center`, `right` |
 
+## Compatibility
+
+Here are the associated versions with this package:
+
+| typedoc-theme-dumi | Typedoc | Typescript |
+|--------------------|---------|------------|
+| v0.1.x             | v0.25.x | &gt;= v4.0 |
+| v0.2.x             | v0.26.x | &gt;= v5.0 |
+
 ## Document
 
 - GitHub pages: [https://yookue.github.io/typedoc-theme-dumi](https://yookue.github.io/typedoc-theme-dumi)
