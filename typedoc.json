@@ -22,7 +22,9 @@
         "./dist/cjs/index.js"
     ],
     "theme": "dumi",
-    "logoImage": "https://typedoc.org/images/logo-32.png",
+    "logoImage": "https://yookue.github.io/assets/ico/logo-icon.svg",
+    "logoWidth": 32,
+    "logoHeight": 32,
     "logoTitle": "Typedoc Theme Dumi",
     "navigationLinkTargets": {
         "GitHub": "_blank",
