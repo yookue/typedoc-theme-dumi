@@ -23,7 +23,7 @@
         "Yookue": "https://yookue.com"
     },
     "plugin": [
-        "./dist/cjs/index.js"
+        "./dist/lib/index.js"
     ],
     "theme": "dumi",
     "logoImage": "https://yookue.github.io/assets/ico/logo-icon.svg",

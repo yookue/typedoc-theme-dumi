@@ -16,12 +16,12 @@
 
 
 import {DefaultThemeRenderContext} from 'typedoc';
-import {toolbar} from '../partial/toolbar';
-import {sidebarLinks} from '../partial/sidebarLinks';
-import {header} from '../partial/header';
-import {navigation} from '../partial/navigation';
-import {footer} from '../partial/footer';
-import {bindProps} from '../util/proto-utils';
+import {toolbar} from '../partial/toolbar.js';
+import {sidebarLinks} from '../partial/sidebarLinks.js';
+import {header} from '../partial/header.js';
+import {navigation} from '../partial/navigation.js';
+import {footer} from '../partial/footer.js';
+import {bindProps} from '../util/proto-utils.js';
 
 
 /**
