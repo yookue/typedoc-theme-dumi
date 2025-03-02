@@ -1,6 +1,6 @@
 {
     "name": "@yookue/typedoc-theme-dumi",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "title": "TypedocThemeDumi",
     "description": "Dumi theme for typedoc, maybe the most beautiful typedoc theme on Mars",
     "homepage": "https://yookue.github.io/typedoc-theme-dumi",
@@ -29,18 +29,18 @@
         "lint:style": "stylelint \"{src,test}/**/*.{css,less}\""
     },
     "devDependencies": {
-        "@types/node": "^16.18.119",
+        "@types/node": "^16.18.126",
         "@typescript-eslint/eslint-plugin": "^7.18.0",
         "del-cli": "^6.0.0",
-        "gh-pages": "^6.2.0",
-        "less": "^4.2.0",
+        "gh-pages": "^6.3.0",
+        "less": "^4.2.2",
         "less-plugin-no-comment": "^0.1.0",
         "stylelint-config-standard-less": "^3.0.1",
         "typedoc": "~0.25.13",
         "typescript": "^4.9.5"
     },
     "peerDependencies": {
-        "typescript": ">= 4"
+        "typescript": ">=4"
     },
     "repository": {
         "type": "git",
@@ -63,7 +63,7 @@
         },
         {
             "type": "individual",
-            "url": "https://yookue.com/public/donate"
+            "url": "https://yookue.com/donation"
         }
     ],
     "author": {
