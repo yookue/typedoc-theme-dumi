@@ -32,23 +32,47 @@ export const header = (context: DumiThemeRenderContext, props: PageEvent<Reflect
     if (hideIndexContentTitle && props.url === 'index.html') {
         return <div class="tsd-page-title-hidden" style="display: none"></div>;
     }
-    const HeadingLevel: string = props.model.isProject() ? 'h2' : 'h1';
+
+    const opts = context.options.getValue('headings');
+
+    // Don't render on the index page or the class hierarchy page
+    // We should probably someday render on the class hierarchy page, but currently breadcrumbs
+    // are entirely dependent on the reflection hierarchy, so it doesn't make sense today.
+    const renderBreadcrumbs = props.url !== "index.html" && props.url !== 'hierarchy.html';
+
+    // Titles are always rendered on DeclarationReflection pages and the modules page for the project.
+    // They are also rendered on the readme + document pages if configured to do so by the user.
+    let renderTitle: boolean;
+    let titleKindString = '';
+    if (props.model.isProject()) {
+        if (props.url === 'index.html' && props.model.readme?.length) {
+            renderTitle = opts.readme;
+        } else {
+            renderTitle = true;
+        }
+    } else if (props.model.isDocument()) {
+        renderTitle = opts.document;
+    } else {
+        renderTitle = true;
+        titleKindString = ReflectionKind.singularString(props.model.kind) + ' ';
+    }
+
     return (
         <div class="tsd-page-title">
-            {!!props.model.parent && <ul class="tsd-breadcrumb">{context.breadcrumb(props.model)}</ul>}
-            {!props.model.isDocument() && (
-                <HeadingLevel class={classNames({ deprecated: props.model.isDeprecated() })}>
-                    {props.model.kind !== ReflectionKind.Project && `${context.internationalization.kindSingularString(props.model.kind)} `}
+            {renderBreadcrumbs && context.breadcrumbs(props.model)}
+            {renderTitle && (
+                <h1 class={classNames({deprecated: props.model.isDeprecated()})}>
+                    {titleKindString}
                     {displayName(props.model)}
                     {hasTypeParameters(props.model) && (
                         <>
-                            {"<"}
-                            {joinElements(", ", props.model.typeParameters, (item) => item.name)}
-                            {">"}
+                            {'<'}
+                            {joinElements(', ', props.model.typeParameters, (item) => item.name)}
+                            {'>'}
                         </>
                     )}
                     {context.reflectionFlags(props.model)}
-                </HeadingLevel>
+                </h1>
             )}
         </div>
     );

@@ -15,7 +15,7 @@
  */
 
 
-import {JSX, ReflectionKind, type PageEvent, type Reflection} from 'typedoc';
+import {JSX, ReflectionKind, i18n, type PageEvent, type Reflection} from 'typedoc';
 import {DumiThemeRenderContext} from '../context/DumiThemeRenderContext.js';
 import {classNames, displayName} from '../util/proto-utils.js';
 
@@ -33,11 +33,10 @@ export const navigation = (context: DumiThemeRenderContext, props: PageEvent<Ref
     return (
         <nav class="tsd-navigation">
             <a href={preventModulesLink ? 'javascript:;' : context.urlTo(props.project)} class={classNames({current: props.project === props.model})}>
-                {context.icons[ReflectionKind.Project]()}
-                <span>{displayName(props.project)}</span>
+                {displayName(props.project)}
             </a>
-            <ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base={context.relativeURL("./")}>
-                <li>{context.i18n.theme_loading()}</li>
+            <ul class="tsd-small-nested-navigation" id="tsd-nav-container">
+                <li>{i18n.theme_loading()}</li>
             </ul>
         </nav>
     );

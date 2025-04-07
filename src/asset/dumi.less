@@ -133,18 +133,23 @@
     box-shadow: var(--toolbar-shadow);
     padding: 12px 0;
 
-    #tsd-search a.title {
-        font-size: 20px !important;
-
+    .tsd-toolbar-contents {
         .logo {
             margin-right: 12px !important;
             vertical-align: middle;
         }
+
+        .title {
+            font-size: 20px !important;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
     }
 
-    #tsd-search[class*="has-focus"] {
+    #tsd-search #tsd-search-input {
         border: 1px solid var(--search-border);
-        border-radius: 2px;
         background-color: var(--search-background);
     }
 }
@@ -154,7 +159,6 @@
 .container .col-content .tsd-index-panel a,
 .container .page-menu .tsd-accordion-details a,
 footer a,
-.tsd-page-toolbar #tsd-search a.title,
 .tsd-page-toolbar #tsd-toolbar-links a {
     &:hover {
         color: #5a7ad9 !important;

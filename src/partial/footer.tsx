@@ -15,7 +15,7 @@
  */
 
 
-import {JSX} from 'typedoc';
+import {JSX, i18n} from 'typedoc';
 import {type DumiThemeRenderContext} from '../context/DumiThemeRenderContext.js';
 
 
@@ -37,7 +37,7 @@ export const footer = (context: DumiThemeRenderContext): JSX.Element => {
 
     let generatorDisplay = <></>;
     if (!hideGenerator) {
-        const message = context.i18n.theme_generated_using_typedoc();
+        const message = i18n.theme_generated_using_typedoc();
         // Only handles one occurrence, but that's all I expect...
         const index = message.indexOf("TypeDoc");
         if (index == -1) {

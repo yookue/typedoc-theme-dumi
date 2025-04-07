@@ -7,14 +7,15 @@
         "jsxFactory": "JSX.createElement",
         "jsxFragmentFactory": "JSX.Fragment",
         "module": "node16",
-        "moduleResolution": "node16",
+        "noImplicitAny": false,
         "target": "es2022",
+        "lib": ["es2023"],
         "removeComments": true,
         "skipLibCheck": true,
         "strict": true,
     },
     "include": [
-        "src/**/*"
+        "src"
     ],
     "exclude": [
         "node_modules",

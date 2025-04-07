@@ -86,6 +86,7 @@ Here are the associated versions with this package:
 | v0.1.x             | v0.25.x | &gt;= v4.0 |
 | v0.2.x             | v0.26.x | &gt;= v5.0 |
 | v0.3.x             | v0.27.x | &gt;= v5.0 |
+| v0.4.x             | v0.28.x | &gt;= v5.0 |
 
 ## Document
 
@@ -100,6 +101,10 @@ Here are the associated versions with this package:
 ## License
 
 This project is under the [MIT License](https://mit-license.org/).
+
+## Copyright
+
+Beijing Yookue Network Technology Ltd.
 
 ## Website
 
