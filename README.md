@@ -87,6 +87,10 @@ Here are the available options, could be used in `typedoc.json`:
 
 - dumi: [https://d.umijs.org](https://d.umijs.org)
 
+## Copyright
+
+Beijing Yookue Network Technology Ltd.
+
 ## License
 
 This project is under the [MIT License](https://mit-license.org/).
