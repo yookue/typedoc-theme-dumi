@@ -1,10 +1,10 @@
 {
-    "name": "@yookue/typedoc-theme-dumi",
-    "version": "0.4.0",
+    "name": "@unikue/typedoc-theme-dumi",
+    "version": "1.0.0",
     "title": "TypedocThemeDumi",
     "description": "Dumi theme for typedoc, maybe the most beautiful typedoc theme on Mars",
-    "homepage": "https://yookue.github.io/typedoc-theme-dumi",
-    "organization": "Yookue Ltd",
+    "homepage": "https://unikueltd.github.io/typedoc-theme-dumi",
+    "organization": "Unikue Ltd",
     "private": false,
     "license": "MIT",
     "keywords": [
@@ -31,46 +31,46 @@
     },
     "devDependencies": {
         "@eslint/eslintrc": "^3.3.1",
-        "@eslint/js": "^9.24.0",
-        "@types/node": "^18.19.64",
-        "@typescript-eslint/eslint-plugin": "^8.29.0",
+        "@eslint/js": "^9.35.0",
+        "@types/node": "^18.19.124",
+        "@typescript-eslint/eslint-plugin": "^8.43.0",
         "del-cli": "^6.0.0",
         "gh-pages": "^6.3.0",
-        "globals": "^16.0.0",
+        "globals": "^16.4.0",
         "less": "^4.3.0",
         "less-plugin-no-comment": "^0.1.0",
         "stylelint-config-standard-less": "^3.0.1",
-        "typedoc": "~0.28.2",
-        "typescript": "^5.8.3"
+        "typedoc": "~0.28.12",
+        "typescript": "^5.9.2"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/yookue/typedoc-theme-dumi.git"
+        "url": "git+https://github.com/unikueltd/typedoc-theme-dumi.git"
     },
     "bugs": {
-        "url": "https://github.com/yookue/typedoc-theme-dumi/issues"
+        "url": "https://github.com/unikueltd/typedoc-theme-dumi/issues"
     },
     "publishConfig": {
         "access": "public",
         "registry": "https://registry.npmjs.org/"
     },
     "collective": {
-        "url": "https://opencollective.com/yookue-awesome"
+        "url": "https://opencollective.com/unikue-awesome"
     },
     "funding": [
         {
             "type": "opencollective",
-            "url": "https://opencollective.com/yookue-awesome"
+            "url": "https://opencollective.com/unikue-awesome"
         },
         {
             "type": "individual",
-            "url": "https://yookue.com/public/donate"
+            "url": "https://unikue.cn/donation"
         }
     ],
     "author": {
-        "name": "Yookue Ltd",
-        "email": "yookue@outlook.com",
-        "url": "https://yookue.com"
+        "name": "Unikue Ltd",
+        "email": "unikue@yeah.net",
+        "url": "https://unikue.cn"
     },
     "contributors": [
         {

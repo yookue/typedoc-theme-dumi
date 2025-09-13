@@ -19,20 +19,20 @@
     ],
     "includeVersion": false,
     "navigationLinks": {
-        "GitHub": "https://github.com/yookue/typedoc-theme-dumi",
-        "Yookue": "https://yookue.com"
+        "GitHub": "https://github.com/unikueltd/typedoc-theme-dumi",
+        "Unikue": "https://unikue.cn"
     },
     "plugin": [
         "./dist/lib/index.js"
     ],
     "theme": "dumi",
-    "logoImage": "https://yookue.github.io/assets/ico/logo-icon.svg",
+    "logoImage": "https://unikueltd.github.io/assets/ico/logo-icon.svg",
     "logoWidth": 32,
     "logoHeight": 32,
     "logoTitle": "Typedoc Theme Dumi",
     "navigationLinkTargets": {
         "GitHub": "_blank",
-        "Yookue": "_blank"
+        "Unikue": "_blank"
     },
     "preventModulesLink": true,
     "hideIndexContentTitle": true,

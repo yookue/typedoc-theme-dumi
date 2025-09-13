@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2024 Yookue Ltd. All rights reserved.
+ * Copyright (c) 2024 Unikue Ltd. All rights reserved.
  *
  * Licensed under the MIT License (the "License")
  *
@@ -54,7 +54,7 @@ export const footer = (context: DumiThemeRenderContext): JSX.Element => {
                         </a>
                         {post}
                         {' with '}
-                        <a href="https://yookue.github.io/typedoc-theme-dumi" target="_blank">
+                        <a href="https://unikueltd.github.io/typedoc-theme-dumi" target="_blank">
                             dumi theme
                         </a>
                     </p>

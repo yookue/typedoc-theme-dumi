@@ -1,8 +1,8 @@
-# @yookue/typedoc-theme-dumi
+# @unikue/typedoc-theme-dumi
 
-[![NPM version](https://img.shields.io/npm/v/@yookue/typedoc-theme-dumi.svg?style=flat)](https://npmjs.org/package/@yookue/typedoc-theme-dumi)
+[![NPM version](https://img.shields.io/npm/v/@unikue/typedoc-theme-dumi.svg?style=flat)](https://npmjs.org/package/@unikue/typedoc-theme-dumi)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](LICENSE.txt)
-[![NPM downloads](http://img.shields.io/npm/dm/@yookue/typedoc-theme-dumi.svg?style=flat)](https://npmjs.org/package/@yookue/typedoc-theme-dumi)
+[![NPM downloads](http://img.shields.io/npm/dm/@unikue/typedoc-theme-dumi.svg?style=flat)](https://npmjs.org/package/@unikue/typedoc-theme-dumi)
 
 🏅 Dumi theme for typedoc, maybe the most beautiful typedoc theme on Mars 😁
 
@@ -26,18 +26,18 @@
 
 ## Demo
 
-🖼️ The live example of this theme is here: [https://yookue.github.io/typedoc-theme-dumi](https://yookue.github.io/typedoc-theme-dumi)
+🖼️ The live example of this theme is here: [https://unikueltd.github.io/typedoc-theme-dumi](https://unikueltd.github.io/typedoc-theme-dumi)
 
 ## Snapshot
 
-![snapshot](https://raw.githubusercontent.com/yookue/typedoc-theme-dumi/trunk/doc/snapshot.png)
+![snapshot](https://raw.githubusercontent.com/unikue/typedoc-theme-dumi/trunk/doc/snapshot.png)
 
 ## Quickstart
 
 You can install this package in your typescript project as follows:
 
 ```bash
-$ npm install @yookue/typedoc-theme-dumi --save-dev
+$ npm install @unikue/typedoc-theme-dumi --save-dev
 ```
 
 Enjoy your coding journey with `typedoc-theme-dumi` ✌️
@@ -47,7 +47,7 @@ Enjoy your coding journey with `typedoc-theme-dumi` ✌️
 - Using in command line
 
 ```bash
-$ typedoc [TARGET] --plugin @yookue/typedoc-theme-dumi --theme dumi
+$ typedoc [TARGET] --plugin @unikue/typedoc-theme-dumi --theme dumi
 ```
 
 - Using in `typedoc.json`
@@ -55,7 +55,7 @@ $ typedoc [TARGET] --plugin @yookue/typedoc-theme-dumi --theme dumi
 ```json
 {
     "plugin": [
-        "@yookue/typedoc-theme-dumi"
+        "@unikue/typedoc-theme-dumi"
     ],
     "theme": "dumi"
 }
@@ -87,10 +87,11 @@ Here are the associated versions with this package:
 | v0.2.x             | v0.26.x | &gt;= v5.0 |
 | v0.3.x             | v0.27.x | &gt;= v5.0 |
 | v0.4.x             | v0.28.x | &gt;= v5.0 |
+| v1.0.x             | v0.28.x | &gt;= v5.0 |
 
 ## Document
 
-- GitHub pages: [https://yookue.github.io/typedoc-theme-dumi](https://yookue.github.io/typedoc-theme-dumi)
+- GitHub pages: [https://unikueltd.github.io/typedoc-theme-dumi](https://unikueltd.github.io/typedoc-theme-dumi)
 
 ## Thanks
 
@@ -104,8 +105,8 @@ This project is under the [MIT License](https://mit-license.org/).
 
 ## Copyright
 
-Beijing Yookue Network Technology Ltd.
+Beijing Unikue Network Technology Ltd.
 
 ## Website
 
-- Yookue: [https://yookue.com](https://yookue.com)
+- Unikue: [https://unikue.cn](https://unikue.cn)

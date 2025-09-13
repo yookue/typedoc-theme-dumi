@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2024 Yookue Ltd. All rights reserved.
+ * Copyright (c) 2024 Unikue Ltd. All rights reserved.
  *
  * Licensed under the MIT License (the 'License')
  *
@@ -50,7 +50,7 @@ export function load(app: Application) {
     app.renderer.hooks.on('head.end', (context): JSX.Element => {
         return (
             <>
-                <meta name="typedoc-theme" content="@yookue/typedoc-theme-dumi"/>
+                <meta name="typedoc-theme" content="@unikue/typedoc-theme-dumi"/>
                 <link rel="stylesheet" type="text/css" href={context.relativeURL('./assets/dumi.css')}/>
             </>
         );
