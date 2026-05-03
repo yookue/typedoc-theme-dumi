@@ -1,6 +1,6 @@
 {
     "name": "@unikue/typedoc-theme-dumi",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "title": "TypedocThemeDumi",
     "description": "Dumi theme for typedoc, maybe the most beautiful typedoc theme on Mars",
     "homepage": "https://unikueltd.github.io/typedoc-theme-dumi",
@@ -30,18 +30,19 @@
         "lint:style": "stylelint \"{src,test}/**/*.{css,less}\""
     },
     "devDependencies": {
-        "@eslint/eslintrc": "^3.3.1",
-        "@eslint/js": "^9.35.0",
-        "@types/node": "^18.19.124",
-        "@typescript-eslint/eslint-plugin": "^8.43.0",
-        "del-cli": "^6.0.0",
+        "@eslint/eslintrc": "^3.3.5",
+        "@eslint/js": "^10.0.1",
+        "@types/node": "^25.6.0",
+        "@typescript-eslint/eslint-plugin": "^8.59.1",
+        "del-cli": "^7.0.0",
         "gh-pages": "^6.3.0",
-        "globals": "^16.4.0",
-        "less": "^4.3.0",
+        "globals": "^17.6.0",
+        "less": "^4.6.4",
         "less-plugin-no-comment": "^0.1.0",
-        "stylelint-config-standard-less": "^3.0.1",
-        "typedoc": "~0.28.12",
-        "typescript": "^5.9.2"
+        "stylelint-config-standard-less": "^4.1.0",
+        "typedoc": "~0.28.19",
+        "typescript": "^6.0.3",
+        "typescript-eslint": "^8.59.1"
     },
     "repository": {
         "type": "git",

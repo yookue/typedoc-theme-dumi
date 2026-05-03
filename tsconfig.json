@@ -1,24 +1,28 @@
 {
     "compilerOptions": {
-        "baseUrl": "./",
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "target": "es2020",
+        "lib": ["dom", "es2017"],
         "declaration": true,
         "esModuleInterop": true,
         "jsx": "react",
         "jsxFactory": "JSX.createElement",
         "jsxFragmentFactory": "JSX.Fragment",
-        "module": "node16",
+        "module": "esnext",
         "noImplicitAny": false,
-        "target": "es2022",
-        "lib": ["es2023"],
+        "noUnusedLocals": true,
         "removeComments": true,
         "skipLibCheck": true,
         "strict": true,
+        "types": ["node"]
     },
     "include": [
         "src"
     ],
     "exclude": [
         "node_modules",
+        "coverage",
         "dist",
         "docs-dist"
     ]

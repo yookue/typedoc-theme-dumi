@@ -15,7 +15,7 @@
  */
 
 
-import {JSX, ReflectionKind, i18n, type PageEvent, type Reflection} from 'typedoc';
+import {JSX, i18n, type PageEvent, type Reflection} from 'typedoc';
 import {DumiThemeRenderContext} from '../context/DumiThemeRenderContext.js';
 import {classNames, displayName} from '../util/proto-utils.js';
 

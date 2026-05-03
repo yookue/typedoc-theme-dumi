@@ -15,7 +15,7 @@
  */
 
 
-import {DefaultThemeRenderContext} from 'typedoc';
+import {DefaultThemeRenderContext, JSX, type PageEvent, type Reflection} from 'typedoc';
 import {toolbar} from '../partial/toolbar.js';
 import {sidebarLinks} from '../partial/sidebarLinks.js';
 import {header} from '../partial/header.js';
@@ -36,17 +36,17 @@ import {bindProps} from '../util/proto-utils.js';
 // noinspection JSUnusedGlobalSymbols
 export class DumiThemeRenderContext extends DefaultThemeRenderContext {
     // Override the default toolbar
-    override toolbar = bindProps(toolbar, this);
+    override toolbar: (props: PageEvent<Reflection>) => JSX.Element = bindProps(toolbar, this);
 
     // Override the default sidebar links
-    override sidebarLinks = bindProps(sidebarLinks, this);
+    override sidebarLinks: () => JSX.Element | null = bindProps(sidebarLinks, this);
 
     // Override the default content header
-    override header = bindProps(header, this);
+    override header: (props: PageEvent<Reflection>) => JSX.Element = bindProps(header, this);
 
     // Override the default navigation
-    override navigation = bindProps(navigation, this);
+    override navigation: (props: PageEvent<Reflection>) => JSX.Element = bindProps(navigation, this);
 
     // Override the default footer
-    override footer = bindProps(footer, this);
+    override footer: () => JSX.Element = bindProps(footer, this);
 }

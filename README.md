@@ -88,6 +88,7 @@ Here are the associated versions with this package:
 | v0.3.x             | v0.27.x | &gt;= v5.0 |
 | v0.4.x             | v0.28.x | &gt;= v5.0 |
 | v1.0.x             | v0.28.x | &gt;= v5.0 |
+| v1.1.x             | v0.28.x | &gt;= v5.0 |
 
 ## Document
 
