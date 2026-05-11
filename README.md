@@ -30,7 +30,7 @@
 
 ## Snapshot
 
-![snapshot](https://raw.githubusercontent.com/unikue/typedoc-theme-dumi/trunk/doc/snapshot.png)
+![snapshot](https://raw.githubusercontent.com/unikueltd/typedoc-theme-dumi/trunk/doc/snapshot.png)
 
 ## Quickstart
 
