@@ -17,10 +17,10 @@
 
 import nodeFs from 'node:fs';
 import nodePath from 'node:path';
-import {fileURLToPath} from 'url';
-import {Application, JSX, RendererEvent} from 'typedoc';
+import { fileURLToPath } from 'url';
+import { Application, JSX, RendererEvent } from 'typedoc';
 import * as options from './declare/options.js';
-import {DumiTheme} from './theme/DumiTheme.js';
+import { DumiTheme } from './theme/DumiTheme.js';
 
 
 /**
@@ -60,7 +60,7 @@ export function load(app: Application) {
     app.renderer.on(RendererEvent.END, () => {
         const source = nodePath.resolve(nodePath.dirname(fileURLToPath(import.meta.url)), './assets');
         const target = nodePath.join(nodePath.resolve(app.options.getValue('out')), 'assets');
-        nodeFs.cpSync(source, target, {force: true, recursive: true});
+        nodeFs.cpSync(source, target, { force: true, recursive: true });
     });
 
     // Declare theme

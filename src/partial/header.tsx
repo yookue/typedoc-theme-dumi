@@ -15,9 +15,9 @@
  */
 
 
-import {JSX, ReflectionKind, type PageEvent, type Reflection} from 'typedoc';
-import {type DumiThemeRenderContext} from '../context/DumiThemeRenderContext.js';
-import {classNames, displayName, hasTypeParameters, joinElements} from '../util/proto-utils.js';
+import { JSX, ReflectionKind, type PageEvent, type Reflection } from 'typedoc';
+import { type DumiThemeRenderContext } from '../context/DumiThemeRenderContext.js';
+import { classNames, displayName, hasTypeParameters, joinElements } from '../util/proto-utils.js';
 
 
 /**
@@ -61,7 +61,7 @@ export const header = (context: DumiThemeRenderContext, props: PageEvent<Reflect
         <div class="tsd-page-title">
             {renderBreadcrumbs && context.breadcrumbs(props.model)}
             {renderTitle && (
-                <h1 class={classNames({deprecated: props.model.isDeprecated()})}>
+                <h1 class={classNames({ deprecated: props.model.isDeprecated() })}>
                     {titleKindString}
                     {displayName(props.model)}
                     {hasTypeParameters(props.model) && (

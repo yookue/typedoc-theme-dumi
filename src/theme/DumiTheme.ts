@@ -15,8 +15,8 @@
  */
 
 
-import {DefaultTheme, type PageEvent, type Reflection} from 'typedoc';
-import {DumiThemeRenderContext} from '../context/DumiThemeRenderContext.js';
+import { DefaultTheme, type PageEvent, type Reflection } from 'typedoc';
+import { DumiThemeRenderContext } from '../context/DumiThemeRenderContext.js';
 
 
 /**

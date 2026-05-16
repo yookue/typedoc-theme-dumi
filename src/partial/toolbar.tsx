@@ -15,9 +15,9 @@
  */
 
 
-import {JSX, i18n, type PageEvent, type Reflection} from 'typedoc';
-import {DumiThemeRenderContext} from '../context/DumiThemeRenderContext.js';
-import {displayName} from '../util/proto-utils.js';
+import { JSX, i18n, type PageEvent, type Reflection } from 'typedoc';
+import { DumiThemeRenderContext } from '../context/DumiThemeRenderContext.js';
+import { displayName } from '../util/proto-utils.js';
 
 
 /**
@@ -40,10 +40,10 @@ export const toolbar = (context: DumiThemeRenderContext, props: PageEvent<Reflec
         }
         const attributes = {};
         if (logoWidth > 0) {
-            Object.assign(attributes, {'width': logoWidth});
+            Object.assign(attributes, { 'width': logoWidth });
         }
         if (logoHeight > 0) {
-            Object.assign(attributes, {'height': logoHeight});
+            Object.assign(attributes, { 'height': logoHeight });
         }
         return <img class="logo" src={logoImage} {...attributes} alt=""/>;
     };

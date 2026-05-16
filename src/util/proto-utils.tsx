@@ -15,7 +15,7 @@
  */
 
 
-import {JSX, DeclarationReflection, ProjectReflection, Reflection, SignatureReflection, TypeParameterReflection} from 'typedoc';
+import { JSX, DeclarationReflection, ProjectReflection, Reflection, SignatureReflection, TypeParameterReflection } from 'typedoc';
 
 
 /**

@@ -15,8 +15,8 @@
  */
 
 
-import {JSX} from 'typedoc';
-import {DumiThemeRenderContext} from '../context/DumiThemeRenderContext.js';
+import { JSX } from 'typedoc';
+import { DumiThemeRenderContext } from '../context/DumiThemeRenderContext.js';
 
 
 /**

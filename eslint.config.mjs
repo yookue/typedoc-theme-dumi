@@ -7,8 +7,6 @@ import globals from 'globals';
 export default tslint.config(
     {
         ignores: [
-            'src/**/*.test.ts*',
-            'test/**/*',
             'coverage/**/*',
             'dist/**/*',
             'docs-dist/**/*',
@@ -29,6 +27,7 @@ export default tslint.config(
         rules: {
             'no-control-regex': 'off',
             'no-empty': 'off',
+            'object-curly-spacing': ['error', 'always'],
             '@typescript-eslint/ban-ts-comment': 'off',
             '@typescript-eslint/no-empty-function': 'off',
             '@typescript-eslint/no-explicit-any': 'off',
@@ -37,6 +36,6 @@ export default tslint.config(
             '@typescript-eslint/no-this-alias': 'off',
             '@typescript-eslint/no-var-requires': 'off',
             '@typescript-eslint/triple-slash-reference': 'off',
-        },
+        }
     }
 );

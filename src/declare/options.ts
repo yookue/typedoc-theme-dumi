@@ -16,7 +16,7 @@
 
 
 
-import {ParameterType, type DeclarationOption} from 'typedoc';
+import { ParameterType, type DeclarationOption } from 'typedoc';
 
 
 /**

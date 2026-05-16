@@ -15,9 +15,9 @@
  */
 
 
-import {JSX, i18n, type PageEvent, type Reflection} from 'typedoc';
-import {DumiThemeRenderContext} from '../context/DumiThemeRenderContext.js';
-import {classNames, displayName} from '../util/proto-utils.js';
+import { JSX, i18n, type PageEvent, type Reflection } from 'typedoc';
+import { DumiThemeRenderContext } from '../context/DumiThemeRenderContext.js';
+import { classNames, displayName } from '../util/proto-utils.js';
 
 
 /**
@@ -32,7 +32,7 @@ export const navigation = (context: DumiThemeRenderContext, props: PageEvent<Ref
 
     return (
         <nav class="tsd-navigation">
-            <a href={preventModulesLink ? 'javascript:;' : context.urlTo(props.project)} class={classNames({current: props.project === props.model})}>
+            <a href={preventModulesLink ? 'javascript:;' : context.urlTo(props.project)} class={classNames({ current: props.project === props.model })}>
                 {displayName(props.project)}
             </a>
             <ul class="tsd-small-nested-navigation" id="tsd-nav-container">

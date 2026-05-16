@@ -1,6 +1,6 @@
 {
     "name": "@unikue/typedoc-theme-dumi",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "title": "TypedocThemeDumi",
     "description": "Dumi theme for typedoc, maybe the most beautiful typedoc theme on Mars",
     "homepage": "https://unikueltd.github.io/typedoc-theme-dumi",
@@ -26,8 +26,11 @@
         "docs:build": "typedoc --out ./docs-dist",
         "docs:publish": "gh-pages -d ./docs-dist",
         "lint": "npm run lint:script && npm run lint:style",
-        "lint:script": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
-        "lint:style": "stylelint \"{src,test}/**/*.{css,less}\""
+        "lint:fix": "npm run lint:script:fix && npm run lint:style:fix",
+        "lint:script": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
+        "lint:script:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
+        "lint:style": "stylelint \"src/**/*.{css,less}\"",
+        "lint:style:fix": "stylelint --fix \"src/**/*.{css,less}\""
     },
     "devDependencies": {
         "@eslint/eslintrc": "^3.3.5",

@@ -15,13 +15,13 @@
  */
 
 
-import {DefaultThemeRenderContext, JSX, type PageEvent, type Reflection} from 'typedoc';
-import {toolbar} from '../partial/toolbar.js';
-import {sidebarLinks} from '../partial/sidebarLinks.js';
-import {header} from '../partial/header.js';
-import {navigation} from '../partial/navigation.js';
-import {footer} from '../partial/footer.js';
-import {bindProps} from '../util/proto-utils.js';
+import { DefaultThemeRenderContext, JSX, type PageEvent, type Reflection } from 'typedoc';
+import { toolbar } from '../partial/toolbar.js';
+import { sidebarLinks } from '../partial/sidebarLinks.js';
+import { header } from '../partial/header.js';
+import { navigation } from '../partial/navigation.js';
+import { footer } from '../partial/footer.js';
+import { bindProps } from '../util/proto-utils.js';
 
 
 /**

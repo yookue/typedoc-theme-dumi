@@ -15,8 +15,8 @@
  */
 
 
-import {JSX, i18n} from 'typedoc';
-import {type DumiThemeRenderContext} from '../context/DumiThemeRenderContext.js';
+import { JSX, i18n } from 'typedoc';
+import { type DumiThemeRenderContext } from '../context/DumiThemeRenderContext.js';
 
 
 /**
@@ -32,7 +32,7 @@ export const footer = (context: DumiThemeRenderContext): JSX.Element => {
 
     const attributes = {};
     if (footerAlign) {
-        Object.assign(attributes, {'class': `text-${footerAlign}`});
+        Object.assign(attributes, { 'class': `text-${footerAlign}` });
     }
 
     let generatorDisplay = <></>;
